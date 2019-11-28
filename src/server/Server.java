@@ -54,6 +54,20 @@ public class Server {
             }
         }
 
-       
+        public void run() {
+            try {
+                in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                String line;
+                while ((line = in.readLine()) != null) {
+                    System.out.println(line);
+                    for (GamersHandler client : gamers) {
+                        PrintWriter out = new PrintWriter(client.socket.getOutputStream(), true);
+                        out.println(line);
+                    }
+                }
+            } catch (Exception e) {
+                throw new IllegalStateException(e);
+            }
+        }
     }
 }
