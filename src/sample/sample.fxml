@@ -1,29 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-
-    <AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" GridPane.rowIndex="1">
-        <Button id="btn11" fx:id="btn11" layoutX="1.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn12" fx:id="btn12" layoutX="200.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn13" fx:id="btn13" layoutX="400.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn21" fx:id="btn21" layoutY="200.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn22" fx:id="btn22" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn23" fx:id="btn23" layoutX="400.0" layoutY="200.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn31" fx:id="btn31" layoutY="400.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn32" fx:id="btn32" layoutX="200.0" layoutY="400.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-        <Button id="btn33" fx:id="btn33" layoutX="400.0" layoutY="400.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
-    </AnchorPane>
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 </GridPane>
