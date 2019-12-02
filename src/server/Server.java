@@ -9,7 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Server {
     private List<GamersHandler> gamers;
 
-    private int id = 1;
+    private String id = "1";
 
 
     public Server() {
@@ -40,14 +40,14 @@ public class Server {
             this.socket = socket;
             gamers.add(this);
             System.out.println("New player " + socket.getPort());
-            OutputStream outputStream;
+            PrintWriter writer;
             try {
-                outputStream = socket.getOutputStream();
-                outputStream.write(id);
-                if (id == 1) {
-                    id = 2;
+                writer = new PrintWriter(socket.getOutputStream(), true);
+                writer.println(id);
+                if (id.equals("1")) {
+                    id = "2";
                 } else {
-                    id = 1;
+                    id = "1";
                 }
             } catch (IOException e) {
                 throw new IllegalArgumentException(e);
