@@ -6,42 +6,59 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121"
-          xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaseController">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaseController">
 
-    <AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" GridPane.rowIndex="1">
-        <Separator fx:id="separator1" layoutX="182.0" layoutY="58.0" orientation="VERTICAL" prefHeight="415.0"
-                   prefWidth="22.0"/>
-        <Separator fx:id="separator2" layoutX="421.0" layoutY="58.0" orientation="VERTICAL" prefHeight="421.0"
-                   prefWidth="30.0" style=""/>
-        <Separator fx:id="separator3" layoutX="53.0" layoutY="102.0" prefHeight="50.0" prefWidth="494.0"/>
-        <Separator fx:id="separator4" layoutX="74.0" layoutY="373.0" prefHeight="39.0" prefWidth="465.0"/>
-        <Button fx:id="btn11" alignment="CENTER" layoutX="58.0" layoutY="11.0" mnemonicParsing="false"
-                prefHeight="110.0" prefWidth="128.0" style="-fx-background-color: transparent;"
-                styleClass="gameBoardButton"/>
-        <Button fx:id="btn12" layoutX="214.0" layoutY="23.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="189.0"
-                style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn13" layoutX="444.0" layoutY="42.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="128.0"
-                style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn21" layoutX="60.0" layoutY="192.0" mnemonicParsing="false" prefHeight="116.0"
-                prefWidth="122.0" style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn22" layoutX="206.0" layoutY="181.0" mnemonicParsing="false" prefHeight="161.0"
-                prefWidth="202.0" style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn23" layoutX="445.0" layoutY="183.0" mnemonicParsing="false" prefHeight="132.0"
-                prefWidth="141.0" style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn31" layoutX="69.0" layoutY="402.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="115.0"
-                style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn32" layoutX="245.0" layoutY="402.0" mnemonicParsing="false" prefHeight="89.0"
-                prefWidth="128.0" style="-fx-background-color: transparent;"/>
-        <Button fx:id="btn33" layoutX="445.0" layoutY="402.0" mnemonicParsing="false" prefHeight="78.0"
-                prefWidth="101.0" style="-fx-background-color: transparent;"/>
+    <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="600.0" GridPane.rowIndex="1">
+        <Separator fx:id="separator1" layoutX="182.0" layoutY="58.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="22.0" />
+        <Separator fx:id="separator2" layoutX="421.0" layoutY="58.0" orientation="VERTICAL" prefHeight="421.0" prefWidth="30.0" style="" />
+        <Separator fx:id="separator3" layoutX="53.0" layoutY="102.0" prefHeight="50.0" prefWidth="494.0" />
+        <Separator fx:id="separator4" layoutX="74.0" layoutY="373.0" prefHeight="39.0" prefWidth="465.0" />
+        <Button id="btn00" fx:id="btn00" alignment="CENTER" layoutX="58.0" layoutY="11.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="128.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn01" fx:id="btn01" layoutX="214.0" layoutY="23.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="189.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn02" fx:id="btn02" layoutX="444.0" layoutY="42.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="128.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn10" fx:id="btn10" layoutX="60.0" layoutY="192.0" mnemonicParsing="false" prefHeight="116.0" prefWidth="122.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn11" fx:id="btn11" layoutX="206.0" layoutY="181.0" mnemonicParsing="false" prefHeight="161.0" prefWidth="202.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn12" fx:id="btn12" layoutX="445.0" layoutY="183.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="141.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn20" fx:id="btn20" layoutX="69.0" layoutY="402.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="115.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn21" fx:id="btn21" layoutX="245.0" layoutY="402.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="128.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+        <Button id="btn22" fx:id="btn22" layoutX="445.0" layoutY="402.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="62.0" />
+         </font></Button>
+      <Button layoutX="58.0" layoutY="548.0" mnemonicParsing="false" text="EXIT" />
+      <Button layoutX="436.0" layoutY="541.0" mnemonicParsing="false" text="PLAY AGAIN" />
     </AnchorPane>
     <columnConstraints>
-        <ColumnConstraints/>
+        <ColumnConstraints />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints/>
-        <RowConstraints/>
+        <RowConstraints />
+        <RowConstraints />
     </rowConstraints>
 </GridPane>
