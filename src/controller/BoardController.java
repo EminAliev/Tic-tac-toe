@@ -8,7 +8,7 @@ import view.StatusGame;
 
 import java.io.IOException;
 
-public class BoardController{
+public class BoardController extends Task {
     private Connection connection;
     private BaseController baseController;
 
@@ -49,4 +49,41 @@ public class BoardController{
         }
         return false;
     }
-}
+
+
+    @Override
+    protected Void call() throws IOException {
+        while (true) {
+                if (connection.getBf().ready()) {
+                    String line = connection.getBf().readLine();
+                    if (line != null) {
+                        if (line.length() == 1) {
+                            baseController.setId(line);
+                        } else {
+                            String userId = line.split(",")[0];
+                            int row = Integer.parseInt(line.split(",")[1]);
+                            int column = Integer.parseInt(line.split(",")[2]);
+
+                            Platform.runLater(() -> {
+                                if (userId.equals("1")) {
+                                    baseController.getBtn()[row][column].setText(String.valueOf('x'));
+                                    if (win('x')) {
+                                        // todo: очистить поле
+                                        //	должно появиться некое окошко с выигрышом x 
+                                    }
+                                } else {
+                                    baseController.getBtn()[row][column].setText(String.valueOf('o'));
+                                    if (win('o')) {
+                                        // todo: очистить поле
+                                        //	должно появиться некое окошко с выигрышом y
+                                    }
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
