@@ -50,9 +50,18 @@ public class BoardController extends Task {
         return false;
     }
 
+    private void clear() {
+        if ((win('x') | win('o'))) {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    baseController.getBtn()[i][j].setText(String.valueOf(""));
+                }
+            }
+        }
+    }
 
     @Override
-    protected Void call() throws IOException {
+    protected Object call() throws IOException {
         while (true) {
                 if (connection.getBf().ready()) {
                     String line = connection.getBf().readLine();
@@ -68,14 +77,14 @@ public class BoardController extends Task {
                                 if (userId.equals("1")) {
                                     baseController.getBtn()[row][column].setText(String.valueOf('x'));
                                     if (win('x')) {
-                                        // todo: очистить поле
-                                        //	должно появиться некое окошко с выигрышом x 
+                                        clear();
+                                        // сделать окошко!!!
                                     }
                                 } else {
                                     baseController.getBtn()[row][column].setText(String.valueOf('o'));
                                     if (win('o')) {
-                                        // todo: очистить поле
-                                        //	должно появиться некое окошко с выигрышом y
+                                        clear();
+                                        // сделать окошко!!!
                                     }
                                 }
                             });
@@ -85,5 +94,4 @@ public class BoardController extends Task {
             }
         }
     }
-
 
