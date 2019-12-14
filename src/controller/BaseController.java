@@ -68,6 +68,9 @@ public class BaseController {
                 btn[i][j].setOnAction(event -> connection.writeMessage(id + "," + i1 + "," + j1));
             }
         }
+        BoardController boardController = new BoardController(connection, this);
+        ExecutorService threadPool = Executors.newFixedThreadPool(1);
+        threadPool.execute(boardController);
     }
 
     public void clearBoard() {

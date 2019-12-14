@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class Connection {
 
-    private String IP = "localhost";
-    private int PORT = 1234;
+    private String IP = "127.0.0.1";
+    private int PORT = 4567;
 
     private BufferedReader bf;
     private PrintWriter writer;
@@ -20,8 +20,8 @@ public class Connection {
     }
 
     private void start(String ip, int port) {
-        Scanner scanner = new Scanner(System.in);
         try {
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Введите ip адрес сервера: ");
             ip = scanner.nextLine();
             Socket socket = new Socket(ip, port);
@@ -50,6 +50,6 @@ public class Connection {
     }
 
     public void writeMessage(String message) {
-        this.writer.println(message);
+        writer.println(message);
     }
 }
