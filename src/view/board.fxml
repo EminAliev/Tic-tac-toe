@@ -9,13 +9,12 @@
 <?import javafx.scene.text.Font?>
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaseController">
-
     <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="600.0" GridPane.rowIndex="1">
         <Separator fx:id="separator1" layoutX="182.0" layoutY="58.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="22.0" />
         <Separator fx:id="separator2" layoutX="421.0" layoutY="58.0" orientation="VERTICAL" prefHeight="421.0" prefWidth="30.0" style="" />
         <Separator fx:id="separator3" layoutX="53.0" layoutY="102.0" prefHeight="50.0" prefWidth="494.0" />
         <Separator fx:id="separator4" layoutX="74.0" layoutY="373.0" prefHeight="39.0" prefWidth="465.0" />
-        <Button id="btn00" fx:id="btn00" alignment="CENTER" layoutX="58.0" layoutY="11.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="128.0" style="-fx-background-color: transparent;">
+        <Button id="btn00" fx:id="btn00" layoutX="58.0" layoutY="11.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="128.0" style="-fx-background-color: transparent;">
          <font>
             <Font size="62.0" />
          </font></Button>
@@ -51,9 +50,8 @@
          <font>
             <Font size="62.0" />
          </font></Button>
-      <Button layoutX="58.0" layoutY="548.0" mnemonicParsing="false" text="EXIT" />
-      <Button layoutX="436.0" layoutY="541.0" mnemonicParsing="false" text="PLAY AGAIN" />
     </AnchorPane>
+   <Button onMouseClicked="#onMouseClickedCancelBtn" mnemonicParsing="false" text="EXIT" />
     <columnConstraints>
         <ColumnConstraints />
     </columnConstraints>

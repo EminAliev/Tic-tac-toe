@@ -61,7 +61,7 @@ public class BoardController extends Task {
     }
 
     @Override
-    protected Object call() throws IOException {
+    protected Void call() throws IOException {
         while (true) {
                 if (connection.getBf().ready()) {
                     String line = connection.getBf().readLine();
@@ -78,13 +78,13 @@ public class BoardController extends Task {
                                     baseController.getBtn()[row][column].setText(String.valueOf('x'));
                                     if (win('x')) {
                                         clear();
-                                        // сделать окошко!!!
+                                        StatusGame.status("'X' win");
                                     }
                                 } else {
                                     baseController.getBtn()[row][column].setText(String.valueOf('o'));
                                     if (win('o')) {
                                         clear();
-                                        // сделать окошко!!!
+                                        StatusGame.status("'O' win");
                                     }
                                 }
                             });
