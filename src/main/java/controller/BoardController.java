@@ -13,6 +13,9 @@ public class BoardController extends Task {
     private BaseController baseController;
 
 
+    public BoardController() {
+    }
+
     public BoardController(Connection connection, BaseController baseController) {
         this.connection = connection;
         this.baseController = baseController;
@@ -93,5 +96,21 @@ public class BoardController extends Task {
                 }
             }
         }
+
+    public Connection getConnection() {
+        return connection;
     }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
+
+    public BaseController getBaseController() {
+        return baseController;
+    }
+
+    public void setBaseController(BaseController baseController) {
+        this.baseController = baseController;
+    }
+}
 
