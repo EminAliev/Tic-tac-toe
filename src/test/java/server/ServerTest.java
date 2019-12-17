@@ -16,8 +16,12 @@ public class ServerTest {
 
     @Test
     public void startTest() {
-        Server server = new Server();
         assertEquals(server.getId(),"1");
+    }
+
+    @Test
+    public void playerNotNullTest() {
+        assertNotNull(server.getGamers());
     }
 
 
