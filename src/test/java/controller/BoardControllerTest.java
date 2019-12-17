@@ -15,7 +15,7 @@ public class BoardControllerTest {
     }
 
     @Test
-    public void btnNotNullTest() {
+    public void connectionNotNullTest() {
         assertNotNull(boardController.getConnection());
     }
 
