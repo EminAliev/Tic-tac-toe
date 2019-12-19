@@ -11,14 +11,6 @@ public class Server {
 
     private String id = "1";
 
-    public List<GamersHandler> getGamers() {
-        return gamers;
-    }
-
-    public void setGamers(List<GamersHandler> gamers) {
-        this.gamers = gamers;
-    }
-
     public Server() {
         gamers = new CopyOnWriteArrayList<>();
     }
@@ -37,6 +29,22 @@ public class Server {
                 throw new IllegalStateException(e);
             }
         }
+    }
+
+    public List<GamersHandler> getGamers() {
+        return gamers;
+    }
+
+    public void setGamers(List<GamersHandler> gamers) {
+        this.gamers = gamers;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     private class GamersHandler extends Thread {
