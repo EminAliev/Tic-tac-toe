@@ -5,6 +5,6 @@ import server.Server;
 public class ServerMain {
     public static void main(String[] args) {
         Server server = new Server();
-        server.start(4567);
+        server.start();
     }
 }

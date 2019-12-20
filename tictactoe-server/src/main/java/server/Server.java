@@ -9,16 +9,18 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Server {
     private List<GamersHandler> gamers;
 
+    private final static int PORT = 4567;
+
     private String id = "1";
 
     public Server() {
         gamers = new CopyOnWriteArrayList<>();
     }
 
-    public void start(int port) {
+    public void start() {
         ServerSocket socket;
         try {
-            socket = new ServerSocket(port);
+            socket = new ServerSocket(PORT);
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }

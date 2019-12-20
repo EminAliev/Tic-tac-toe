@@ -9,21 +9,20 @@ import java.util.Scanner;
 
 public class Connection {
 
-    private String IP = "127.0.0.1";
-    private int PORT = 4567;
-
     private BufferedReader bf;
     private PrintWriter writer;
 
     public Connection() {
-        start(IP, PORT);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите ip адрес сервера:");
+        String ip = scanner.nextLine();
+        System.out.println("Введите порт сервера: ");
+        int port = scanner.nextInt();
+        start(ip, port);
     }
 
     private void start(String ip, int port) {
         try {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Введите ip адрес сервера: ");
-            ip = scanner.nextLine();
             Socket socket = new Socket(ip, port);
             bf = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
