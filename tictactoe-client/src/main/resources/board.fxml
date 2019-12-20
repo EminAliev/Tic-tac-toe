@@ -51,7 +51,6 @@
             <Font size="62.0" />
          </font></Button>
     </AnchorPane>
-   <Button onMouseClicked="#onMouseClickedCancelBtn" mnemonicParsing="false" text="EXIT" />
     <columnConstraints>
         <ColumnConstraints />
     </columnConstraints>

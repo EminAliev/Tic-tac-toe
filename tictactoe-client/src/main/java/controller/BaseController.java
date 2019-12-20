@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -59,7 +60,7 @@ public class BaseController {
     public void initialize() {
         connection = new Connection();
         btn = new Button[3][3];
-        List<Node> marks = anchorPane.getChildren();
+        ObservableList<Node> marks = anchorPane.getChildren();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 int i1 = i;
