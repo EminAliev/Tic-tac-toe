@@ -63,39 +63,40 @@ public class BoardController extends Task {
         }
     }
 
+
     @Override
     protected Void call() throws IOException {
         while (true) {
-                if (connection.getBf().ready()) {
-                    String line = connection.getBf().readLine();
-                    if (line != null) {
-                        if (line.length() == 1) {
-                            baseController.setId(line);
-                        } else {
-                            String userId = line.split(",")[0];
-                            int row = Integer.parseInt(line.split(",")[1]);
-                            int column = Integer.parseInt(line.split(",")[2]);
+            if (connection.getBf().ready()) {
+                String line = connection.getBf().readLine();
+                if (line != null) {
+                    if (line.length() == 1) {
+                        baseController.setId(line);
+                    } else {
+                        String id = line.split(",")[0];
+                        int row = Integer.parseInt(line.split(",")[1]);
+                        int column = Integer.parseInt(line.split(",")[2]);
 
-                            Platform.runLater(() -> {
-                                if (userId.equals("1")) {
-                                    baseController.getBtn()[row][column].setText(String.valueOf('x'));
-                                    if (win('x')) {
-                                        clear();
-                                        StatusGame.status("'X' win");
-                                    }
-                                } else {
-                                    baseController.getBtn()[row][column].setText(String.valueOf('o'));
-                                    if (win('o')) {
-                                        clear();
-                                        StatusGame.status("'O' win");
-                                    }
+                        Platform.runLater(() -> {
+                            if (id.equals("1")) {
+                                baseController.getBtn()[row][column].setText(String.valueOf('x'));
+                                if (win('x')) {
+                                    clear();
+                                    StatusGame.status("'X' win");
                                 }
-                            });
-                        }
+                            } else {
+                                baseController.getBtn()[row][column].setText(String.valueOf('o'));
+                                if (win('o')) {
+                                    clear();
+                                    StatusGame.status("'O' win");
+                                }
+                            }
+                        });
                     }
                 }
             }
         }
+    }
 
     public Connection getConnection() {
         return connection;

@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -87,6 +88,7 @@ public class BaseController {
         anchorPane.getChildren().add(btn22);
         //setButtonsEnabled();
     }
+
 
     private void setButtonsEnabled() {
         btn00.setDisable(false);
@@ -210,6 +212,19 @@ public class BaseController {
         final Node source = (Node) e.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+    }
+
+    public void onActionReset() {
+        btn = new Button[3][3];
+        List<Node> marks = anchorPane.getChildren();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                int i1 = i;
+                int j1 = j;
+                btn[i][j] = (Button) marks.stream().filter(node -> node.getId().equals("btn" + i1 + j1)).collect(Collectors.toList()).get(0);
+                btn[i][j].setText(String.valueOf(""));
+            }
+        }
     }
 }
 
